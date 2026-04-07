@@ -95,7 +95,6 @@ public class BJ2468_safety_space {
 					
 				}
 				
-				
 			}
 	
 		}
