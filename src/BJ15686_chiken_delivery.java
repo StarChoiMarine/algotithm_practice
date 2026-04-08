@@ -13,14 +13,15 @@ public class BJ15686_chiken_delivery {
 	static int [] picked;
 	
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException{
 		// TODO Auto-generated method stub
 
-		
-	Scanner sc = new Scanner(System.in);
 	
-	N = sc.nextInt();
-	M = sc.nextInt();
+	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	StringTokenizer st = new StringTokenizer(br.readLine());
+	
+	N = Integer.parseInt(st.nextToken());
+	M = Integer.parseInt(st.nextToken());
 	
 	
 	minDis = Integer.MAX_VALUE;
@@ -31,9 +32,11 @@ public class BJ15686_chiken_delivery {
 	
 	for (int i = 0 ; i < N ; i++) {
 		
+		st = new StringTokenizer(br.readLine());
+		
 		for (int j = 0 ; j < N ; j++) {
 			
-			int val = sc.nextInt();
+			int val = Integer.parseInt(st.nextToken());
 			if (val == 1) houseList.add(new int [] {i,j});
 			else if (val ==2) chickenList.add(new int [] {i,j});
 			
@@ -60,7 +63,7 @@ public class BJ15686_chiken_delivery {
 		for (int i = index; i < chickenList.size(); i++)	{
 			
 			picked[depth] = i;
-			dfs(depth +1, index +1);
+			dfs(depth +1, i +1);
 			
 		}
 	
