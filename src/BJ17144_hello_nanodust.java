@@ -196,16 +196,9 @@ public class BJ17144_hello_nanodust {
 		map[m1][1] = 0;
 		map[m2][1] = 0;
 		
-		
-		
-		
-		
+
 	}
-	
-	
-	
-	
-	
+
 	
 
 }
